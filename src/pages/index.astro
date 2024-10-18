@@ -5,6 +5,12 @@ import Pagination from "@/layouts/components/Pagination.astro";
 import Posts from "@/layouts/Posts.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
+import TwitterLogo from '@/layouts/logos/TwitterLogo.astro';
+import NewsletterSection from '@/layouts/components/NewsletterSection.astro';
+import ServicesSection from '@/layouts/components/ServicesSection.astro';
+import Heroes from '@/layouts/components/Heroes.astro';
+import HeroSection from '@/layouts/components/HeroSection.astro';
+import Descripcion from '@/layouts/components/Descripcion.astro';
 
 const posts = await getSinglePage("posts");
 const sortedPosts = sortByDate(posts);
@@ -13,10 +19,19 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
 <Base>
-  <section class="section">
+  <HeroSection />
+  <ServicesSection />
+  <Descripcion />
+  <Heroes />
+  <section class="py-16">
     <div class="container">
+      <h2 id="ultimos-posts" class="text-3xl md:text-4xl font-bold text-center mb-16 leading-tight">
+        <a href="#ultimos-posts" class="text-inherit no-underline hover:underline">
+            Últimos posts
+        </a>
+      </h2>
       <Posts posts={currentPosts} className="mb-16" />
-      <Pagination currentPage={1} totalPages={totalPages} />
     </div>
   </section>
+  <NewsletterSection />
 </Base>

@@ -1,0 +1,52 @@
+---
+import Container from "./Container.astro"
+interface Service {
+  icon: string;
+  title: string;
+  description: string;
+}
+const services: Service[] = [
+  {
+    icon: "images/icons/web.svg",
+    title: "WordPress",
+    description: "Me encanta crear sitios web en WordPress utilizando diseños actuales e intuitivos y siguiendo las mejores prácticas."
+  },
+  {
+    icon: "images/icons/seo.svg",
+    title: "SEO",
+    description: "Me encanta mejorar la visibilidad de mis nichos en los motores de búsqueda y aumentar el tráfico orgánico."
+  },
+  {
+    icon: "images/icons/plane.svg",
+    title: "Travel Planner",
+    description: "Diseño itinerarios de viaje intuitivos y detallados con toda la información relevante para personas que desean aprovechar al máximo su viaje."
+  }
+];
+---
+<div class="bg-white py-16" id="services">
+  <Container>
+    <div class="mb-12 space-y-2 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">Mis Servicios</h2>
+      <p class="text-gray-600 lg:mx-auto lg:w-6/12">
+        Descubre en que servicios me especializo.
+      </p>
+    </div>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {services.map((service) => (
+        <div class="group p-6 sm:p-8 rounded-3xl bg-gray-50 border border-gray-200 shadow-lg shadow-gray-200/50 flex flex-col h-full">
+          <div class="flex items-center space-x-5 mb-4">
+            <img
+              src={service.icon}
+              class="w-16 h-16"
+              width="512"
+              height="512"
+              alt={service.title}
+            />
+            <h3 class="text-2xl font-semibold text-gray-800">{service.title}</h3>
+          </div>
+          <p class="text-gray-600 flex-grow">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</div>

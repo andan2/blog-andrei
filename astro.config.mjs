@@ -3,7 +3,8 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import AutoImport from "astro-auto-import";
-import { defineConfig, squooshImageService } from "astro/config";
+import icon from "astro-icon";
+import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
@@ -13,9 +14,6 @@ export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "http://examplesite.com",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
-  image: {
-    service: squooshImageService(),
-  },
   integrations: [
     react(),
     sitemap(),
@@ -36,6 +34,11 @@ export default defineConfig({
       ],
     }),
     mdx(),
+    icon({
+      include: {
+        heroicons: ["*"], // Incluye todos los iconos de Heroicons
+      },
+    }),
   ],
   markdown: {
     remarkPlugins: [
@@ -52,5 +55,10 @@ export default defineConfig({
       wrap: true,
     },
     extendDefaultPlugins: true,
+  },
+  vite: {
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
   },
 });

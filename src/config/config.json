@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Bookworm Light Astro | Blog Template",
-    "base_url": "https://bookworm-light-astro.vercel.app",
+    "title": "▶️ Andrei Octavian | El Blog Sin Censura",
+    "base_url": "https://www.andreioctaviandanciulescu.com/blog/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "logo": "/images/logo.webp",
     "logo_width": "200",
     "logo_height": "34",
-    "logo_text": "Bookworm Light"
+    "logo_text": "Avatar Andrei"
   },
 
   "settings": {
@@ -17,19 +17,25 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Andrei",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Bookworm Light Astro Blog Template"
+    "meta_description": "El Blog Sin Censura de Andrei"
   },
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © 2023 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Made with ❤️ by [Andrei Octavian Danciulescu](https://www.andreioctaviandanciulescu.com/)"
+  },
+
+  "nav_button": {
+    "enable": true,
+    "label": "Porfolio",
+    "link": "https://iridescent-klepon-57e871.netlify.app/"
   },
 
   "contactinfo": {
-    "address": "355 S Grand Ave <br/> Los Angeles, CA 90071",
-    "email": "info@bookworm.org",
+    "address": "Tokyo <br/> Japón",
+    "email": "hello@andreioctaviandanciulescu.com",
     "phone": "+800 567 1234"
   }
 }

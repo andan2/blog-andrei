@@ -11,7 +11,7 @@ function Notice({
   return (
     <div className={`notice ${type}`}>
       <div className="notice-head">
-        {type === "tip" ? (
+        {type === "consejo" ? (
           <svg
             width="20"
             height="20"

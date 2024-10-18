@@ -1,61 +1,65 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Inicio",
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "IA",
+      "url": "/categories/ia"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Emprendimiento",
+      "url": "/categories/emprendimiento"
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
+      "name": "SEO",
+      "url": "/guia-completa-de-seo"
+    },
+    {
+      "name": "Libros",
+      "url": "/libros",
+      "hasChildren": false,
       "children": [
         {
-          "name": "Authors",
-          "url": "/authors"
+          "name": "Planeta Gandía",
+          "url": "https://planetagandia.com/"
         },
         {
-          "name": "Categories",
-          "url": "/categories"
+          "name": "Planeta Ibiza",
+          "url": "https://planetaibiza.com/"
         },
         {
-          "name": "Tags",
-          "url": "/tags"
+          "name": "Planeta Tokio",
+          "url": "https://planetatokio.com/"
         },
         {
-          "name": "Elements",
-          "url": "/elements"
+          "name": "Planeta Kioto",
+          "url": "https://planetakioto.com/"
         },
         {
-          "name": "Privacy Policy",
-          "url": "/privacy-policy"
+          "name": "Planeta Osaka",
+          "url": "https://planetaosaka.com/"
         }
       ]
     }
   ],
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Sobre Mí",
+      "url": "https://www.andreioctaviandanciulescu.com/"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Contacto",
+      "url": "/contacto"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Política de cookies",
+      "url": "/politica-de-cookies"
     },
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "Política de Privacidad",
+      "url": "/politica-de-privacidad"
     }
   ]
 }

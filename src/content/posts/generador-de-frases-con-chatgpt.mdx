@@ -1,0 +1,148 @@
+---
+title: ¿Cómo crear un generador de frases con ChatGPT?
+description: "meta description"
+date: 2024-04-03T06:00:00+00:00
+image: "/images/posts/generador-frases-inteligencia-artificial.webp"
+categories: ["IA"]
+authors: ["Andrei Octavian"]
+tags: ["Generador de frases", "Buenos dias Maria"]
+draft: false
+---
+
+La capacidad de **crear scripts HTML sin conocimientos avanzados de programación** se ha ampliado gracias a herramientas como ChatGPT. Con esta herramienta basada en inteligencia artificial incluso personas como tú o como yo, sin experiencia en programación, podemos generar código HTML de forma sencilla y eficiente.
+
+**ChatGPT nos puede y nos va hacer la vida mucho más facil a la hora de escribir scripts HTML**, con ello podemos, entre otras cosas, crear formularios interactivos, implementar funciones dinámicas y diseñar elementos de la interfaz. El ejemplo de este post es un generador de frases, perfecto por si queréis tener algún detalle con alguien 😍!
+
+## Prompt para crear un generador de frases
+
+Crear este generador de frases es fácil si sabes qué instrucción añadirle. En este caso, un prompt es como una pregunta que le haces al modelo (ChatGPT) para obtener información. Después de hacerle la pregunta, el modelo generará una respuesta basada en lo que le has pedido. Es como si le pidieras consejos o información a una persona experta, ¡pero en este caso es un modelo de inteligencia artificial quien te ayuda! Alucinante, verdad? Pues a continuación te dejo los pasos a seguir y el prompt!
+
+1. Abre ChatGPT.
+2. Copia y pega el prompt que te he dejado un poco más abajo para generar las frases.
+3. Copia el código HTML y CSS generado.
+4. Comprueba el código en tu página web.
+
+¡Y listo 😉 ! Siguiendo estos simples pasos, podrás aprovechar la magia de ChatGPT y obtener un código personalizado para tu generador de frases.
+
+```html
+Generar código HTML y CSS para un generador de frases con el texto del botón centrado y frases personalizadas
+
+Frases:
+1. Hoy tendrás un día MARAVILLOSO 😇
+2. Hoy tendrás un día ESPECTACULAR 😇
+3. Hoy tendrás un día FENOMENAL 😊
+4. Hoy tendrás un día EXTRAORDINARIO 🤩
+5. Hoy tendrás un día IMPRESIONANTE 🥳
+6. Hoy tendrás un día GENIAL🤩
+7. Hoy tendrás un día FABULOSO 🥳
+8. Hoy tendrás un día MAGNÍFICO 😉
+9. Hoy tendrás un día SUBLIME 🤭
+10. Hoy tendrás un día ESTUPENDO 😉
+
+Generar el código HTML y CSS con el texto del botón centrado, las frases personalizadas y el estilo adecuado.
+```
+
+## Código HTML y CSS para generar frases
+
+Si prefieres ahorrar tiempo y no seguir los pasos detallados, aquí tienes una opción más rápida. Puedes simplemente copiar el código proporcionado y pegarlo en tu página web. Puedes personalizar las frases a tu gusto.
+
+Al hacerlo, obtendrás el mismo resultado sin necesidad de realizar los pasos uno por uno. Es una manera fácil y conveniente de obtener el generador de frases en tu sitio web.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generador de frases</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      color: #ff4d4d;
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #ff9999;
+      color: #fff;
+      font-size: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      /* Nueva regla CSS para centrar solo el texto del botón */
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    .loading-icon {
+      animation: spin 1s infinite linear;
+      font-size: 24px;
+      margin-top: 15px;
+      display: none;
+    }
+
+    #frase-generada {
+      color: #000;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    function generarFrase() {
+      var frases = [
+        "Hoy tendrás un día MARAVILLOSO 😇",
+        "Hoy tendrás un día ESPECTACULAR 😇",
+        "Hoy tendrás un día FENOMENAL 😊",
+        "Hoy tendrás un día EXTRAORDINARIO 🤩",
+        "Hoy tendrás un día IMPRESIONANTE 🥳",
+        "Hoy tendrás un día GENIAL🤩",
+        "Hoy tendrás un día FABULOSO 🥳",
+        "Hoy tendrás un día MAGNÍFICO 😉",
+        "Hoy tendrás un día SUBLIME 🤭",
+        "Hoy tendrás un día ESTUPENDO 😉",
+        "Hoy tendrás un día INCREÍBLE 😇",
+        "Hoy tendrás un día GRANDIOSO 🤭",
+        "Hoy tendrás un día SENSACIONAL",
+        "Hoy tendrás un día SOBRESALIENTE 🥳",
+        "Hoy tendrás un día EXCEPCIONAL 🥳",
+        "Hoy tendrás un día ALUCINANTE 😇",
+        "Hoy tendrás un día ESTELAR 😎"
+      ];
+
+      var indice = Math.floor(Math.random() * frases.length);
+      var frase = frases[indice];
+
+      document.getElementById("frase-generada").style.display = "none";
+      document.getElementById("loading-icon").style.display = "inline-block";
+
+      setTimeout(function() {
+        document.getElementById("loading-icon").style.display = "none";
+        document.getElementById("frase-generada").textContent = frase;
+        document.getElementById("frase-generada").style.display = "block";
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div style="text-align: center;">
+    <button onclick="generarFrase()">👉 Cliquea aquí 👈</button>
+    <br>
+    <span id="loading-icon" class="loading-icon">⏳</span>
+  </div>
+  <p id="frase-generada" align="center"></p>
+</body>
+</html>
+```
+
+Para acabar, hacer un generador de frases con ChatGPT es una forma genial de sacarle partido a la inteligencia artificial en tu web. Solo tienes que seguir los pasos que te mencioné antes y voilà, tendrás frases personalizadas a tu antojo. Cualquier duda que tengas no dudes en dejarla en los comentarios, la responderé con mucho gusto!

@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import type { BsLinkedin } from "react-icons/bs";
 
 // Post collection schema
 const postsCollection = defineCollection({
@@ -29,6 +30,7 @@ const authorsCollection = defineCollection({
         facebook: z.string().optional(),
         twitter: z.string().optional(),
         instagram: z.string().optional(),
+        linkedin: z.string().optional(),
       })
       .optional(),
     draft: z.boolean().optional(),
@@ -45,6 +47,17 @@ const pagesCollection = defineCollection({
     image: z.string().optional(),
     layout: z.string().optional(),
     draft: z.boolean().optional(),
+    libros_favoritos: z.object({
+      title: z.string(),
+      items: z.array(z.object({
+        title: z.string(),
+        author: z.string(),
+        cover: z.string(),
+        description: z.string(),
+        link: z.string(),
+        buyLink: z.string() // Añadido nuevo campo para el enlace de compra
+      }))
+    }).optional(),
   }),
 });
 
