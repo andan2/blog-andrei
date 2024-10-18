@@ -36,12 +36,12 @@ const { name, bio, avatar, verified = false, socialMedia = {} } = Astro.props;
   {Object.keys(socialMedia).length > 0 && (
     <div class="social-links">
       {socialMedia.twitter && (
-        <a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer" class="social-icon">
+        <a href={socialMedia.twitter} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visitar perfil de X">
           <FaXTwitter />
         </a>
       )}
       {socialMedia.linkedin && (
-        <a href={socialMedia.linkedin} target="_blank" rel="noopener noreferrer" class="social-icon">
+        <a href={socialMedia.linkedin} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visitar perfil de LinkedIn de Andrei Octavian Danciulescu">
           <FaLinkedin />
         </a>
       )}
