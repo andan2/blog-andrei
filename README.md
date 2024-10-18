@@ -12,10 +12,6 @@ Bienvenido al repositorio de mi blog personal, creado utilizando la plantilla Bo
 * Compartir posts en redes sociales
 * Sugerencias de posts similares
 
-![carga en version escritorio](/images/readme/carga_web_escritorio.webp)
-
-![carga en version movil](/images/readme/carga_web_movil.webp)
-
 ## 🛠️ Tecnologías utilizadas
 
 * [Astro](https://astro.build/)
