@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "▶️ Andrei Octavian | El Blog Sin Censura",
-    "base_url": "https://www.andreioctaviandanciulescu.com/blog/",
+    "base_url": "https://blog.andreioctaviandanciulescu.com/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
