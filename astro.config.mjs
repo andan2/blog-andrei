@@ -16,7 +16,11 @@ export default defineConfig({
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      filter: (page) => 
+        !page.includes('/categories/') && 
+        !page.includes('/tags/')
+    }),
     tailwind({
       config: {
         applyBaseStyles: false,
