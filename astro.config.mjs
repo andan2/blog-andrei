@@ -11,15 +11,19 @@ import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "http://examplesite.com",
+  site: "https://blog.andreioctaviandanciulescu.com",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   integrations: [
     react(),
     sitemap({
-      filter: (page) => 
-        !page.includes('/categories/') && 
-        !page.includes('/tags/')
+      filter: (page) =>
+        !page.includes('/categories/') &&
+        !page.includes('/tags/') &&
+        !page.includes('/404'),
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
     }),
     tailwind({
       config: {

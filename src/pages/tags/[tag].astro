@@ -26,7 +26,7 @@ const sortedPosts = sortByDate(filterByTags);
 const title = humanize(tag || "");
 ---
 
-<Base title={title || "Tag"}>
+<Base title={`${title || "Tag"} | El Blog de Andrei`}>
   <div class="section">
     <div class="container">
       <p class="text-center text-2xl mb-4">Mostrando publicaciones de:</p>

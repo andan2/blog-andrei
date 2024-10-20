@@ -33,7 +33,8 @@
     "src/**/*.tsx",
     "src/pages/**/*.astro",
     "src/layouts/**/*.astro",
-    "src/components/**/*.astro"
+    "src/components/**/*.astro",
+    "src/types/**/*.d.ts"  // Añade esta línea
   ],
   "exclude": ["node_modules", "dist"]
 }

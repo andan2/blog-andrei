@@ -1,5 +1,20 @@
 User-agent: *
 Allow: /
 Disallow: /api/*
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+User-agent: Googlebot-Image
+Allow: /images/
 
 Sitemap: https://blog.andreioctaviandanciulescu.com/sitemap-index.xml
+
+# Crawl-delay: 10
+
+Host: https://blog.andreioctaviandanciulescu.com
