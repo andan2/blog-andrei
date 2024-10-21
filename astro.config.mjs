@@ -20,7 +20,10 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/categories/') &&
         !page.includes('/tags/') &&
-        !page.includes('/404'),
+        !page.includes('/404') &&
+        !page.includes('/page/') &&
+        !page.includes('/search') &&
+        !page.includes('/elements'),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
